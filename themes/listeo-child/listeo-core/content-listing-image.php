@@ -31,7 +31,7 @@
 					<?php echo '<img data-url="'.esc_url(get_post_permalink($id)).'" class="listeo_liting_single_galary_image" src="'.esc_attr($image[0]).'" alt="">'; ?>
 				</a>
 				<?php
-				if($gallery_img_counter == 3)
+				if($gallery_img_counter == 30)
 				{
 					break;
 				}
