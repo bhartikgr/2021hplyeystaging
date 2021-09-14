@@ -16,10 +16,8 @@
 .single_listing_description {
   padding-right: 5px;
   margin-top: 4px;
-  height: 13px;
-  overflow: hidden;
+  min-height: 129px;
   line-height: 15px;
-  padding: px;
   width: 111%;
   font-size: 12px;
   width: 100%;
@@ -377,7 +375,6 @@ span.close_modal_info_tag:after {
 @media (max-width: 600px) {
   .single_listing_description {
     height: 18px;
-    white-space: nowrap;
     font-size: 14px;
     line-height: 18px;
     margin-bottom: 3px;
