@@ -1022,7 +1022,7 @@ div#listeo-listings-container .col-lg-12.col-md-12 .listing-item-container.list-
 .choose-file-wrapper .choose-file {
     background-color: #f65a5f;
     color: #fff;
-    font-family: "Raleway","HelveticaNeue","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "Roboto","HelveticaNeue","Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 15px;
     font-weight: 600;
     padding: 5px 15px;
@@ -2557,7 +2557,7 @@ p.mem-bdg {
 
 /* Google Reviews start */
 
-#listing-google-reviews h3.listing-desc-headline {font-family: 'Raleway';font-weight: 500;font-size: 22px;margin-bottom: 30px !important;}
+#listing-google-reviews h3.listing-desc-headline {font-family: 'Roboto';font-weight: 500;font-size: 22px;margin-bottom: 30px !important;}
 
 .google-reviews-summary {
     display: flex;
@@ -2628,7 +2628,7 @@ p.mem-bdg {
     line-height: 24px;
     font-size: 14px;
     transition: 0.2s;
-    font-family: 'Raleway';
+    font-family: 'Roboto';
 }
 
 .google-reviews-read-more img {
@@ -2642,7 +2642,7 @@ p.mem-bdg {
     border-color: #d0d0d0;
 }
 
-#listing-google-reviews * {font-family: 'Raleway';}
+#listing-google-reviews * {font-family: 'Roboto';}
 
 #listing-google-reviews .listing-reviews ul li {
     padding-bottom: 30px;

@@ -76,8 +76,8 @@
   line-height: 32px;
 }
 .sort-by .chosen-container-single .chosen-single span {
-  font-size: 14px;
-  font-family: raleway;
+  font-size: 16px;
+  font-family: 'Roboto';
 }
 .sort-by .chosen-container-single a.chosen-single:hover {
   background: #f3f3f3 !important;

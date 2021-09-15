@@ -2078,7 +2078,7 @@ body .pac-container {
   border-top: none;
   box-sizing: content-box;
   margin-top: -2px;
-  font-family: "Raleway";
+  font-family: "Roboto";
 }
 
 /* Autocomplete for homepage */
@@ -16734,7 +16734,7 @@ button,
 .map-box div,
 .numerical-rating .rating-counter,
 body .menu-responsive i.menu-trigger:after {
-  font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial,
+  font-family: "roboto", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial,
     sans-serif;
   text-transform: none;
 }
