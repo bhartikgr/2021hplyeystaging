@@ -178,11 +178,11 @@ else: ?>
 						$owner_data = get_userdata( $owner_id );
 						$direct_fb_style_referral = "listing_".get_the_ID(); 
 						if( get_post_meta($post->ID,'_verified',true ) == 'on') {
-							$fb_style_input_val = "Hi ".$owner_data->first_name.", is this available?";
+							$fb_style_input_val = "Hi ".$owner_data->first_name.", what is your pricing?";
 							$fb_style_send_btn = '<a href="#" id="direct_fb_style_msg_btn"> Send </a>';
 						}
 						else{
-							$fb_style_input_val = "Hi, is this available?";
+							$fb_style_input_val = "Hi, what is your pricing?";
 							$fb_style_send_btn = '<a href="#" id="listeo_fb_style_unverify_msg"> Send </a>';
 						}
 					?>
