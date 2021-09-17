@@ -2565,7 +2565,6 @@ function filter_hyply_chat_message(message){
     message.includes('fb') ||
     message.includes('Facebook') ||
     message.includes('instagram') ||
-    message.includes('insta') ||
     message.includes('@') ||
     message.includes('call') ||
     message.includes('website') ||

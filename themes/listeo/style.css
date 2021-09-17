@@ -2249,10 +2249,10 @@ body .pac-container {
 /* Main Search Input */
 .main-search-input {
   margin-top: 50px;
-  border-radius: 0px;
+  border-radius: 50px;
   width: 100%;
   background-color: #fff;
-  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 0 0 8px 0 rgb(0 0 0 / 12%);
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
@@ -18427,7 +18427,7 @@ h4 span.headline-detail {
   }
 
   .main-search-container h4 {
-    font-size: 20px;
+    font-size: 24px;
     font-weight: 400;
     line-height: 32px;
   }

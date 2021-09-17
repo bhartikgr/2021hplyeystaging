@@ -1104,7 +1104,7 @@ class Listeo_Core_Messages {
         $mail_content = '<div><p><a href="'.$listing_url.'"> '.$listing_url.' </a> a message has been submitted via unverified form </p> <p> '.$message.' </p>By:<br>'.$result['user'].' </div>';
         $result['content'] = ($mail_content);
 
-        if(wp_mail($admin_mail.',michael@hypley.com,26rinky@gmail.com','Unverified Listing Contact',$mail_content) )
+        if(wp_mail($admin_mail.',michael@hypley.com','Unverified Listing Contact',$mail_content) )
         {
             $result['success'] = "1";
         }
