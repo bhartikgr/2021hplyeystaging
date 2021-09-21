@@ -26,8 +26,8 @@ jobs:
       - name: "Deploy"
         uses: milanmk/actions-file-deployer@master
         with:
-          remote-protocol: "sftp"
-          remote-host: "ftp.example.com"
-          remote-user: "username"
+          remote-protocol: "sftp ssh"
+          remote-host: "3.249.38.47"
+          remote-user: "bitnami"
           ssh-private-key: ${{ secrets.DEPLOY_PRIVATE_KEY }}
           remote-path: "/var/www/example.com"
