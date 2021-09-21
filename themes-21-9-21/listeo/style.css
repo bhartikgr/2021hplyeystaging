@@ -2078,7 +2078,7 @@ body .pac-container {
   border-top: none;
   box-sizing: content-box;
   margin-top: -2px;
-  font-family: "Roboto";
+  font-family: "Raleway";
 }
 
 /* Autocomplete for homepage */
@@ -2164,12 +2164,6 @@ body .pac-container {
   height: 100%;
   width: 100%;
   display: block;
-  background: linear-gradient(
-    to right,
-    rgba(255, 255, 255, 0.99) 20%,
-    rgba(255, 255, 255, 0.7) 70%,
-    rgba(255, 255, 255, 0) 95%
-  );
 }
 
 .main-search-container h2 {
@@ -2179,7 +2173,7 @@ body .pac-container {
 
 .main-search-container h4 {
   font-size: 24px;
-  font-weight: 300;
+  font-weight: 400;
   color: #777;
   line-height: 32px;
 }
@@ -2249,10 +2243,10 @@ body .pac-container {
 /* Main Search Input */
 .main-search-input {
   margin-top: 50px;
-  border-radius: 50px;
+  border-radius: 0px;
   width: 100%;
   background-color: #fff;
-  box-shadow: 0 0 8px 0 rgb(0 0 0 / 12%);
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.12);
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
@@ -11830,7 +11824,7 @@ span.like-icon {
 
 #titlebar h1,
 #titlebar h2 {
-  font-size: 32px;
+  font-size: 28px;
   line-height: 40px;
   margin: 1px 0 3px 0;
 }
@@ -16734,7 +16728,7 @@ button,
 .map-box div,
 .numerical-rating .rating-counter,
 body .menu-responsive i.menu-trigger:after {
-  font-family: "roboto", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial,
+  font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial,
     sans-serif;
   text-transform: none;
 }
@@ -17967,6 +17961,7 @@ h4 span.headline-detail {
   .main-search-input-item
     .chosen-container-active.chosen-with-drop
     .chosen-single {
+background-color: white !important;
     border: 1px solid #e0e0e0;
     box-shadow: none;
     transition: 0s;
@@ -18427,14 +18422,14 @@ h4 span.headline-detail {
   }
 
   .main-search-container h4 {
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 400;
     line-height: 32px;
   }
 
-  .main-search-container:before {
+/*   .main-search-container:before {
     background: rgba(255, 255, 255, 0.92);
-  }
+  } */
 }
 
 @media (max-width: 480px) {

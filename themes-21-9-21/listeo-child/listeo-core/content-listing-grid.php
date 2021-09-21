@@ -31,44 +31,6 @@
 <div class="listing-item-container listing-geo-data listo-main-box-sec"  <?php echo listeo_get_geo_data($post); ?> data-minPrice="<?=$cristian_min_price?>">
    <!--<a href="<?php //the_permalink(); ?>" class="listing-item-container listing-geo-data"  <?php echo listeo_get_geo_data($post); ?>>-->
    <div data-link="<?php the_permalink(); ?>" class="listing-item listeo_grid_view_item listo-list-iteam <?php if($is_featured){ ?>featured-listing<?php } ?>">
-      
-      <?php if( is_user_logged_in() ) { ?>
-         
-         <?php 
-            $temp_get_first_img_url = "";
-            $temp_get_first_img = (array) get_post_meta( $id, '_gallery', true );
-            if( !empty($temp_get_first_img) ){
-               foreach ( (array) $temp_get_first_img as $attachment_id => $attachment_url ) {
-                  $img = wp_get_attachment_image_src( $attachment_id, 'listeo-gallery' );
-                  if( isset($img[0]) ){
-                     $temp_get_first_img_url = esc_attr($img[0]);
-                     break;
-                  }
-               }
-            }
-         ?>
-
-         <div class="listeo_custom_wishlist_main">
-            <a data-img_url="<?php echo $temp_get_first_img_url; ?>" id="listeo_add_to_wishlist_<?php echo $post->ID; ?>" <?php if( listeo_custom_check_if_wishlisted($post->ID) ) { echo 'style="display:none;"'; } ?> class="listeo_custom_wishlist_btn popup-with-zoom-anim" data-post_id="<?php echo esc_attr($post->ID); ?>" href="#listeo_wishlist_popup">
-               <span class="wishlist_logged_save_desktop wishlist_like_icon"> </span>
-               <span style="display:none;" class="wishlist_logged_save_mobile wishlist_like_icon"></span>
-            </a>
-            
-            <a id="listeo_remove_to_wishlist_<?php echo $post->ID; ?>" <?php if( listeo_custom_check_if_wishlisted($post->ID) == false ) { echo 'style="display:none;"'; } ?> href="javascript:;" class="listeo_remove_to_wishlist" data-post_id="<?php echo esc_attr($post->ID); ?>">
-               <span class="wishlist_logged_saved_desktop wishlist_like_icon saved"> </span>
-               <span style="display:none;" class="wishlist_logged_saved_mobile wishlist_like_icon saved"></span>
-            </a>
-         </div>
-      
-      <?php } else { ?>
-         <div class="listeo_custom_wishlist_main">
-            <a class="sign-in popup-with-zoom-anim" href="#sign-in-dialog">
-               <span class="wishlist_logged_save_desktop wishlist_like_icon"> </span>
-               <span style="display:none;" class="wishlist_logged_save_mobile wishlist_like_icon"></span>
-            </a>
-         </div>
-      <?php } ?>
-
       <div class="listing-small-badges-container listo-new-container">
          <?php if($is_featured){ ?>
          <div class="listing-small-badge featured-badge listeo-featured-listing-box">
@@ -108,6 +70,14 @@
       <?php }
          }
          ?>
+<p style="font-size: 10px;    padding: 5px 10px 0px 10px;margin:0;white-space: nowrap;
+text-overflow: ellipsis;
+overflow: hidden;
+display: inherit;"><?php 
+	$friendly_address = get_post_meta( $id, '_friendly_address', true );
+		$address = get_post_meta( $id, '_address', true );
+		echo (!empty($friendly_address)) ? $friendly_address : $address ;
+?></p>
       <div class="listing-item-content listo-new-listing-iteam">
          <?php
             $terms = get_the_terms( get_the_ID(), 'listing_category' );
