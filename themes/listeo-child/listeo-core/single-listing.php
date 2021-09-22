@@ -44,6 +44,7 @@ else: ?>
 // 		$d = DateTime::createFromFormat('d-m-Y', $expires);
 // 		echo $d->getTimestamp(); 
 		?>
+<!---- price function  ------>
 
 <?php $cristian_min_price = (get_the_listing_price_range() && (strpos(get_the_listing_price_range(), 'Starts from') !== false))?substr(get_the_listing_price_range(),11):"$ 0"; ?>
 <!-- Content
