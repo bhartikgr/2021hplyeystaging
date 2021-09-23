@@ -33,7 +33,7 @@ Template:  listeo
         border-radius: 12px;
         margin-bottom: 20px;}
     
-        #un_verified_listing_widget{display:none;}
+        /* #un_verified_listing_widget{display:none;} */
     .main-detail-_types_of_events_you_service{    line-height: 20px;}
     .apartment-details li:last-child{line-height:20px;}
 /* start css listing design added by KI Dev on 19 02 2020 */
