@@ -201,7 +201,7 @@ exit();*/
 				?>
 					<div class="main-btn-new">
 						<a href="#sign-in-dialog" class="send-message-to-owner button popup-with-zoom-anim new-btn-class" style="display:block;">
-							<?php echo esc_html_e('Message', 'listeo'); ?>
+							<?php echo esc_html_e('Message Vendor', 'listeo'); ?>
 						</a>
 					</div>
 					<!-- <p><?php //printf( esc_html__( 'Please %s sign in%s to see contact details.', 'listeo' ), '<a href="#sign-in-dialog" class="sign-in popup-with-zoom-anim">', '</a>' ) 
