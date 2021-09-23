@@ -83,16 +83,6 @@ else: ?>
 				<div class="listing-titlebar-title">
 					<h2><?php the_title(); ?>
 
-					<div class="listing-small-badge pricing-badge listo-new-badge d-block pl-0 my-4">
-					<!--<i class="fa fa-<?php echo esc_attr(get_option('listeo_price_filter_icon','tag')); ?>"></i>-->
-					<a style="color: #000;" target="_blank" href="<?php the_permalink(); ?>">
-					<?php
-					echo __('From ', 'listeo_core').' '.$cristian_min_price;
-					// echo get_the_listing_regular_price();
-					?>
-					</a>
-				</div>
-
 					<?php
 					$terms = get_the_terms( get_the_ID(), 'listing_category' );
 					if ( $terms && ! is_wp_error( $terms ) ) : 
@@ -151,6 +141,15 @@ else: ?>
 					 }
 					 ?>
 					</h2>
+				<div class="listing-small-badge pricing-badge listo-new-badge d-block pl-0 my-4">
+					<!--<i class="fa fa-<?php echo esc_attr(get_option('listeo_price_filter_icon','tag')); ?>"></i>-->
+					<a style="color: #000;" target="_blank" href="<?php the_permalink(); ?>">
+					<?php
+					echo __('From ', 'listeo_core').' '.$cristian_min_price;
+					// echo get_the_listing_regular_price();
+					?>
+					</a>
+				</div>
 					<?php if(get_the_listing_address()): ?>
 						<span class="cus_address">
 							<a href="#listing-location" class="listing-address">
