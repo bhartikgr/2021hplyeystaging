@@ -3056,4 +3056,54 @@ span.cus_address + .star-rating {
     display: inline;
 }
 
+
+
+div#tax-listing_feature-panel {
+    display: none;
+}
+.post-type-archive-listing .main-search-input-item.slider_type {
+    position: absolute;
+    right: 80px;
+    bottom: -57px;
+    border-right: none;
+    z-index: 1050;
+}
+.post-type-archive-listing .panel-dropdown.float-right {
+    margin-right: 215px;
+}
+
+.post-type-archive-listing .gray-style .main-search-input .panel-dropdown a {
+    border: none;
+}
+
+@media (max-width: 767px) { 
+
+    .post-type-archive-listing .gray-style .main-search-input .panel-dropdown a {
+        height: 34px;
+        line-height: 33px;
+        background: #f3f3f3;
+        border: 1px solid #e0e0e0;
+        border-radius: 36px;
+        box-shadow: unset;
+        padding-left: 20px;
+        font-size: 13px;
+        color: #666;
+        font-weight: 600;
+    }
+
+    .post-type-archive-listing .panel-dropdown.float-right {
+        margin-right: 0;
+        margin-top: 32px;
+    }
+    .post-type-archive-listing .main-search-input-item.slider_type {
+        position: absolute;
+        right: auto;
+        bottom: -54px;
+        border-right: none;
+        z-index: 1050;
+        left: 0;
+    }
+
+}
+
 /* reviews below title end */
