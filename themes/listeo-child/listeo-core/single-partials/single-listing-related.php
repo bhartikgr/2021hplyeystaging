@@ -66,7 +66,7 @@ if($related_query->have_posts()) {
         <div class="col-lg-4 col-md-6">
             <div class="listing-item-container listing-geo-data listo-main-box-sec">
                 <div data-link="<?php the_permalink(); ?>" class="listing-item listeo_grid_view_item listo-list-iteam " style="height: 380.972px;">
-                    <a target="_blank" href="<?php the_permalink(); ?>">
+                    <!-- <a target="_blank" href="<?php the_permalink(); ?>">
                         
                         <?php $gallery = get_post_meta( $post->ID, '_gallery', true ); 
                         foreach ( (array) $gallery as $attachment_id => $attachment_url ) {
@@ -75,7 +75,49 @@ if($related_query->have_posts()) {
                         }
                         ?>
                         <img class="listeo_liting_single_galary_image listeo_liting_single_image" src="<?php echo $image[0]; ?>">
-                    </a>
+                    </a> -->
+                    <?php 	
+
+                            
+                        $gallery = (array) get_post_meta( $id, '_gallery', true );
+                        $count_gallery = listeo_count_gallery_items($id);
+
+                        if(!empty( $gallery )) {
+
+                            if($count_gallery < 2) {
+                                $ids = array_keys($gallery);
+                                if(!empty($ids[0]) && $ids[0] !== 0){ 
+                                    $image_url = wp_get_attachment_image_url($ids[0],'listeo-listing-grid'); 
+                                } else {
+                                    $image_url = get_listeo_core_placeholder_image();
+                                }
+                                ?>
+                                <a target="_blank" href="<?php echo esc_url(get_post_permalink($id)); ?>">
+                                    <img class="listeo_liting_single_galary_image listeo_liting_single_image" src="<?php echo esc_attr($image_url); ?>" alt="">
+                                </a>
+                            <?php
+                            }
+                            else {
+                                $gallery_img_counter = 0;
+                                echo '<div class="listeo_cat_page_silder listeo_liting_single_tttt" data-tttt="test">';
+                                foreach ( (array) $gallery as $attachment_id => $attachment_url ) {
+                                    $gallery_img_counter++;	
+                                    $image = wp_get_attachment_image_src( $attachment_id, 'listeo-gallery' );
+                                    //echo '<a href="'.esc_url($image[0]).'" data-background-image="'.esc_attr($image[0]).'" class="item mfp-gallery"></a>';
+                                    ?>
+                                    <a target="_blank" href="<?php echo esc_url(get_post_permalink($id)); ?>">
+                                        <?php echo '<img data-url="'.esc_url(get_post_permalink($id)).'" class="listeo_liting_single_galary_image" src="'.esc_attr($image[0]).'" alt="">'; ?>
+                                    </a>
+                                    <?php
+                                    if($gallery_img_counter == 3)
+                                    {
+                                        break;
+                                    }
+                                }
+                                echo '</div>';
+                            }
+
+                        } ?>
                     
                     <div class="listing-item-content listo-new-listing-iteam <?php echo "post - ".$post->ID; ?>">
                         
